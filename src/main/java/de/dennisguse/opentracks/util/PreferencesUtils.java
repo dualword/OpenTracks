@@ -26,6 +26,11 @@ import androidx.annotation.VisibleForTesting;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.preference.PreferenceManager;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import de.dennisguse.opentracks.R;
 import de.dennisguse.opentracks.content.data.Distance;
 import de.dennisguse.opentracks.io.file.TrackFileFormat;
@@ -282,5 +287,16 @@ public class PreferencesUtils {
 
     public static boolean isDefaultExportDirectoryUri(SharedPreferences sharedPreferences, Context context) {
         return getDefaultExportDirectoryUri(sharedPreferences, context) != null;
+    }
+
+    public static List<String> getCustomLayoutOrder(SharedPreferences sharedPreferences, Context context) {
+        final String defaultOrder = Arrays.asList(context.getResources().getStringArray(R.array.stats_custom_layout_order_values)).stream().collect(Collectors.joining(";"));
+        final String value = getString(sharedPreferences, context, R.string.stats_custom_layout_order_key, defaultOrder);
+        return new ArrayList<>(Arrays.asList(value.split(";")));
+    }
+
+    public static void setCustomLayoutOrder(SharedPreferences sharedPreferences, Context context, List<String> orderItems) {
+        String prefString = orderItems.stream().collect(Collectors.joining(";"));
+        setString(sharedPreferences, context, R.string.stats_custom_layout_order_key, prefString);
     }
 }

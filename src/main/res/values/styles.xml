@@ -100,11 +100,15 @@ limitations under the License.
     </style>
     <!-- sensor state value -->
     <!-- stats horizontal line -->
-    <style name="StatsHorizontalLine">
+    <style name="HorizontalLine">
         <item name="android:background">@color/stats_separator</item>
         <item name="android:layout_height">1dp</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="StatsHorizontalLine" parent="HorizontalLine">
+        <item name="android:layout_margin">8dp</item>
     </style>
     <!-- stats large item container -->
     <style name="StatsLargeItemContainer">

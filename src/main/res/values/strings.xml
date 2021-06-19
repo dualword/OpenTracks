@@ -386,6 +386,7 @@ limitations under the License.
     <string name="settings_chart_by_time">By time</string>
     <string name="settings_chart_x_axis">X axis</string>
     <!-- Settings Recording -->
+    <string name="settings_recording_customize_layout_title">Customize your recording layout</string>
     <string name="settings_recording_show_on_lockscreen_while_recording_title">Show statistics on lockscreen</string>
     <string name="settings_recording_show_on_lockscreen_while_recording_summary">While recording, show statistics without unlocking the device.</string>
     <string name="settings_recording_keep_screen_on_while_recording_title">Keep screen on</string>
@@ -463,6 +464,7 @@ limitations under the License.
     <string name="stats_total_time">Total time</string>
     <string name="stats_intervals">Intervals</string>
     <string name="stats_split_interval">Split interval</string>
+    <string name="stats_sensors">Sensors</string>
     <!-- Track -->
     <string name="track_name_format">Track %1$d</string>
     <string name="track_record_notification">Recording your track&#8230;</string>
@@ -646,4 +648,5 @@ limitations under the License.
     <string name="instant_export_enabled_title">Instant post-workout export</string>
 
     <string name="settings_default_export_uri_title">Track export directory</string>
+    <string name="title_activity_settings_custom_layout">Customize Recording Layout</string>
 </resources>
